@@ -41,11 +41,7 @@ server = app.server
 app.layout = dbc.Container([
     dbc.NavbarSimple('Relationship Between Gender, Education, Children, and Income', brand='Dash App'),
     dbc.Tabs([
-        dbc.Tab(label='Introduction', children=[
-            html.H3('Introduction to Our Data'),
-            html.P('Your introduction content here...')
-        ]),
-        dbc.Tab(label='Q1: Children, Age, Income', children=[
+        dbc.Tab(label='Children, Age, Income', children=[
             html.Div([
                 dcc.Dropdown(
                     id='x-axis-choice',
@@ -82,7 +78,7 @@ app.layout = dbc.Container([
                 dcc.Graph(id='scatter-plot')
             ])
         ]),
-        dbc.Tab(label='Q2: Education, Occupation, Income, Gender', children=[
+        dbc.Tab(label='Education, Occupation, Income, Gender', children=[
             html.Div([
                 dcc.Dropdown(
                     id='gender-select',
@@ -112,8 +108,8 @@ app.layout = dbc.Container([
                 dcc.Graph(id='bar-plot')
             ])
         ]),
-        dbc.Tab(label='Q3: Gender, Industry, Income', children=[
-            html.H3('Question 3 content and graphs...')
+        dbc.Tab(label='Gender, Industry, Income', children=[
+            html.H3('Third visualization...')
             # add third visualization here
         ])
     ])
