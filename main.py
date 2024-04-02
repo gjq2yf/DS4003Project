@@ -60,7 +60,7 @@ app.layout = dbc.Container([
                     id='y-axis-choice',
                     options=[
                         {'label': 'Income', 'value': 'income'},
-                        {'label': 'Occupational Prestige', 'value': 'prestige'}
+                        {'label': 'Occupational Prestige', 'value': 'prestg10'}
                     ],
                     value='income',  # default
                     clearable=False
@@ -133,7 +133,7 @@ app.layout = dbc.Container([
 def update_scatter_plot(x_choice, y_choice, genders, year):
     filtered_data = g2[(g2['year'] == year) & (g2['gender'].isin(genders))]
     fig = px.scatter(filtered_data, x=x_choice, y=y_choice, color='gender',
-                     labels={'childs': 'Number of Children', 'age': 'Age', 'income': 'Income', 'prestige': 'Occupational Prestige'},
+                     labels={'childs': 'Number of Children', 'age': 'Age', 'income': 'Income', 'prestg10': 'Occupational Prestige'},
                      title=f"Relationship of {x_choice} and {y_choice} in {year}")
     return fig
 
