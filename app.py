@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output, State
 import plotly.express as px
 import pandas as pd
 
-df = pd.read_csv('gjq2yf/DS4003Project/data/data.csv')
+df = pd.read_csv('./DS4003Project/data/data.csv')
 
 df = df.dropna()
 g2 = df.rename(columns={
